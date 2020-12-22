@@ -1,0 +1,7 @@
+/lambda/
+/scripts
+/config
+.history
+.npmrc
+.idea
+yarn.lock
