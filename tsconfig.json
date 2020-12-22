@@ -20,6 +20,6 @@
     "noUnusedLocals": true,
     "allowJs": true,
     "skipLibCheck": true,
-    "experimentalDecorators": true,
+    "experimentalDecorators": true
   }
 }

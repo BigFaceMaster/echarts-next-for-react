@@ -1,5 +1,7 @@
-import React, { FC, useEffect, useRef } from 'react';
-import { dispose, EChartsOption, getInstanceByDom, init } from 'echarts';
+import type { FC} from 'react';
+import React, { useEffect, useRef } from 'react';
+import type { EChartsOption } from 'echarts';
+import { dispose, getInstanceByDom, init } from 'echarts';
 import classNames from 'classnames';
 import isFunction from 'lodash/isFunction';
 import isEmpty from 'lodash/isEmpty';
@@ -7,7 +9,7 @@ import isString from 'lodash/isString';
 import { bind, clear } from 'size-sensor';
 import { useMount, useUnmount } from 'react-use';
 
-export interface EchartsNextForReactCoreProps {
+export type EchartsNextForReactCoreProps = {
   option: EChartsOption;
   notMerge?: boolean;
   replaceMerge?: string | string[];
@@ -15,7 +17,7 @@ export interface EchartsNextForReactCoreProps {
   silent?: boolean;
   style?: React.CSSProperties;
   className?: string;
-  theme?: string | object;
+  theme?: string | Object;
   opts?: {
     renderer?: 'canvas' | 'svg';
     devicePixelRatio?: number;
@@ -26,7 +28,7 @@ export interface EchartsNextForReactCoreProps {
   showLoading: boolean;
   onChartReady: Function;
   onEvents?: Object;
-}
+};
 
 const EchartsNextForReactCore: FC<EchartsNextForReactCoreProps> = (props) => {
   const {
