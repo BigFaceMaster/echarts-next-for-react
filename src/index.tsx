@@ -1,4 +1,4 @@
-import type { FC} from 'react';
+import type { FC } from 'react';
 import React, { useEffect, useRef } from 'react';
 import type { EChartsOption } from 'echarts';
 import { dispose, getInstanceByDom, init } from 'echarts';

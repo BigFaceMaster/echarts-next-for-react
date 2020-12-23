@@ -7,10 +7,13 @@
 > 参考借鉴 [echarts-for-react](https://github.com/hustcc/echarts-for-react)
 
 # 1. 安装
+
 ```sh
 npm install echarts-next-for-react -s
 ```
+
 Or
+
 ```sh
 yarn add echarts-next-for-react
 ```
@@ -18,24 +21,26 @@ yarn add echarts-next-for-react
 # 2. 编码
 
 ```tsx
-import EChartsNextForReactCore from "echarts-next-for-react";
+import EChartsNextForReactCore from 'echarts-next-for-react';
 
 const demo = () => {
-    const option = {
-      xAxis: {
-        type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-      },
-      yAxis: {
-        type: 'value'
-      },
-      series: [{
+  const option = {
+    xAxis: {
+      type: 'category',
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    },
+    yAxis: {
+      type: 'value',
+    },
+    series: [
+      {
         data: [820, 932, 901, 934, 1290, 1330, 1320],
-        type: 'line'
-      }]
-    };
-    
-    return <EChartsNextForReactCore option={option} />;
+        type: 'line',
+      },
+    ],
+  };
+
+  return <EChartsNextForReactCore option={option} />;
 };
 
 export default demo();
