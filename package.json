@@ -15,7 +15,7 @@
     "echarts-react",
     "echarts",
     "react-echarts",
-    "echarts-next-rect",
+    "echarts-next-react",
     "echarts-next",
     "echarts-v5-react",
     "echarts-v5",
@@ -41,7 +41,9 @@
     "precommit": "lint-staged",
     "prettier": "prettier -c --write \"**/*\"",
     "dev": "father doc dev",
-    "build": "father build"
+    "build": "father build",
+    "start": "dumi dev",
+    "site": "dumi build"
   },
   "peerDependencies": {
     "react": "16.x",
@@ -65,7 +67,9 @@
     "lint-staged": "^10.0.0",
     "prettier": "^2.0.1",
     "father": "^2.16.0",
-    "typescript": "^4.0.0"
+    "typescript": "^4.0.0",
+    "dumi": "next",
+    "umi": "^3.2.10"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": "npm run lint-staged:js",
