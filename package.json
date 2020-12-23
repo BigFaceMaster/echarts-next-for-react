@@ -1,14 +1,37 @@
 {
   "name": "echarts-next-for-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Echarts(v5.x | next) components for react.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "authors": {
     "name": "BigFaceMaster",
-    "email": "BigFaceMaster@gmail.com"
+    "email": "BigFaceMaster@gmail.com",
+    "url": "https://github.com/BigFaceMaster"
   },
-  "repository": "git@github.com:BigFaceMaster/echarts-next-for-react.git/echarts-next-for-react",
+  "keywords": [
+    "react",
+    "component",
+    "echarts-react",
+    "echarts",
+    "react-echarts",
+    "echarts-next-rect",
+    "echarts-next",
+    "echarts-v5-react",
+    "echarts-v5",
+    "chart",
+    "charts",
+    "graph",
+    "react-component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BigFaceMaster/echarts-next-for-react"
+  },
+  "bugs": {
+    "url": "https://github.com/BigFaceMaster/echarts-next-for-react/issues",
+    "email": "bigfacemaster@gmail.com"
+  },
   "scripts": {
     "lint": "npm run lint:js && npm run lint:prettier",
     "lint-staged:js": "eslint --ext .ts,.tsx ",

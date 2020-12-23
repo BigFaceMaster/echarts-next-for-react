@@ -17,7 +17,7 @@ export type EchartsNextForReactCoreProps = {
   silent?: boolean;
   style?: React.CSSProperties;
   className?: string;
-  theme?: string | Object;
+  theme?: string | Record<string, unknown>;
   opts?: {
     renderer?: 'canvas' | 'svg';
     devicePixelRatio?: number;
@@ -25,9 +25,9 @@ export type EchartsNextForReactCoreProps = {
     height?: number;
     locale?: string | any;
   };
-  showLoading: boolean;
-  onChartReady: Function;
-  onEvents?: Object;
+  showLoading?: boolean;
+  onChartReady?: (arg0: any) => void;
+  onEvents?: Record<string, unknown>;
 };
 
 const EchartsNextForReactCore: FC<EchartsNextForReactCoreProps> = (props) => {
