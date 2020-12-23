@@ -2,8 +2,10 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   title: 'echarts-next-for-react',
-  favicon: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
-  logo: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+  favicon: 'https://echarts.apache.org/zh/images/favicon.png?_v_=20200710_1',
+  logo: 'https://raw.githubusercontent.com/BigFaceMaster/echarts-next-for-react/master/docs/assets/logo.png',
   outputPath: 'docs-dist',
   // more config: https://d.umijs.org/config
+  locales: [['en-US', 'English'], ['zh-CN', '中文']]
+
 });

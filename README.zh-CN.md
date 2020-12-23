@@ -1,12 +1,10 @@
 # echarts-next-for-react
 
-[![npm](https://img.shields.io/npm/v/echarts-next-for-react.svg)](https://www.npmjs.com/package/echarts-next-for-react)
-
-English | [中文](https://github.com/BigFaceMaster/echarts-next-for-react/blob/master/README.zh-CN.md)
+[English](https://github.com/BigFaceMaster/echarts-next-for-react/blob/master/README.md) | 中文
 
 [Apache ECharts (incubating (v5.x | next))](https://github.com/apache/incubator-echarts) components for react.
 
-# 1. install 
+# 1. 安装
 ```sh
 npm install echarts-next-for-react -s
 ```
@@ -15,7 +13,7 @@ Or
 yarn add echarts-next-for-react
 ```
 
-# 2. Code
+# 2. 编码
 
 ```tsx
 import EChartsNextForReactCore from "echarts-next-for-react";
@@ -41,9 +39,9 @@ const demo = () => {
 export default demo();
 ```
 
-# 3. Params
+# 3. 参数
 
-see [Apache ECharts](https://echarts.apache.org/en/index.html).
+查看 [Apache ECharts](https://echarts.apache.org/en/index.html).
 
 ## LICENSE
 

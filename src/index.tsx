@@ -9,7 +9,7 @@ import isString from 'lodash/isString';
 import { bind, clear } from 'size-sensor';
 import { useMount, useUnmount } from 'react-use';
 
-export type EchartsNextForReactCoreProps = {
+export type EChartsNextForReactCoreProps = {
   option: EChartsOption;
   notMerge?: boolean;
   replaceMerge?: string | string[];
@@ -30,7 +30,7 @@ export type EchartsNextForReactCoreProps = {
   onEvents?: Record<string, unknown>;
 };
 
-const EchartsNextForReactCore: FC<EchartsNextForReactCoreProps> = (props) => {
+const EChartsNextForReactCore: FC<EChartsNextForReactCoreProps> = (props) => {
   const {
     style,
     className,
@@ -144,10 +144,10 @@ const EchartsNextForReactCore: FC<EchartsNextForReactCoreProps> = (props) => {
   );
 };
 
-EchartsNextForReactCore.defaultProps = {
+EChartsNextForReactCore.defaultProps = {
   notMerge: false,
   lazyUpdate: false,
   showLoading: false,
 };
 
-export default EchartsNextForReactCore;
+export default EChartsNextForReactCore;
