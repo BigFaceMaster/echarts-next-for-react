@@ -4,6 +4,8 @@
 
 [Apache ECharts (incubating (v5.x | next))](https://github.com/apache/incubator-echarts) components for react.
 
+> 参考借鉴 [echarts-for-react](https://github.com/hustcc/echarts-for-react)
+
 # 1. 安装
 ```sh
 npm install echarts-next-for-react -s

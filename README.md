@@ -6,6 +6,8 @@ English | [中文](https://github.com/BigFaceMaster/echarts-next-for-react/blob/
 
 [Apache ECharts (incubating (v5.x | next))](https://github.com/apache/incubator-echarts) components for react.
 
+> Refer to the [echarts-for-react](https://github.com/hustcc/echarts-for-react)
+> 
 # 1. install 
 ```sh
 npm install echarts-next-for-react -s
