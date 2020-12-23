@@ -34,7 +34,7 @@
   },
   "scripts": {
     "lint": "npm run lint:js && npm run lint:prettier",
-    "lint-staged:js": "npm run lint",
+    "lint-staged:js": "eslint --ext .ts,.tsx && npm run lint",
     "lint:fix": "eslint --fix --cache --ext .ts,.tsx --format=pretty ./src",
     "lint:js": "eslint --cache --ext .ts,.tsx --format=pretty ./src",
     "lint:prettier": "prettier --check \"**/*\" --end-of-line auto",
@@ -72,7 +72,7 @@
     "umi": "^3.2.10"
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": "npm run lint-staged",
+    "**/*.{ts,tsx}": "npm run lint-staged:js",
     "**/*.{tsx,ts,md,json}": [
       "prettier --write"
     ]
