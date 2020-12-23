@@ -39,4 +39,6 @@ screenshot
 
 build
 
-.eslintcache
+**/.umi
+
+docs-dist
