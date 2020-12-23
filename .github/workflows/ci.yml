@@ -15,9 +15,6 @@ jobs:
         with:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: fetch-deps
       - run: npm install
-      - name: build
       - run: npm build
-      - name: lint
       - run: npm lint
