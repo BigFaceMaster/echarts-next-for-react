@@ -14,10 +14,9 @@ jobs:
         with:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: fetch-deps
       - run: npm install
-      - name: build
-      - run: npm build
+      - run: npm run-script lint
+      - run: npm run-script build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
