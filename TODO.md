@@ -1,4 +1,4 @@
 # ToDo List
 
-- [ ]  Site
-- [ ]  More Demo
+- [ ] Site
+- [ ] More Demo
