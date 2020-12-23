@@ -75,6 +75,9 @@
     "**/*.{ts,tsx}": "npm run lint-staged:js",
     "**/*.{tsx,ts,md,json}": [
       "prettier --write"
+    ],
+    "*.{tsx,ts,md,json}": [
+      "prettier --write"
     ]
   },
   "browserslist": [
