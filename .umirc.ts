@@ -12,4 +12,5 @@ export default defineConfig({
     ['zh-CN', '中文'],
   ],
   base: './echarts-next-for-react',
+  publicPath: "./"
 });
