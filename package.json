@@ -1,6 +1,6 @@
 {
   "name": "echarts-next-for-react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Echarts(v5.x | next) components for react.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
