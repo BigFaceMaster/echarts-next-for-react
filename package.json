@@ -43,7 +43,8 @@
     "dev": "father doc dev",
     "build": "father build",
     "start": "dumi dev",
-    "site": "dumi build"
+    "site": "dumi build",
+    "deploy": "npm run site && gh-pages -d /docs-dist"
   },
   "peerDependencies": {
     "react": "16.x",

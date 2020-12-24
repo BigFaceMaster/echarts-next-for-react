@@ -5,7 +5,7 @@ on:
     types: [created]
 
 jobs:
-  build:
+  build-and-lint-and-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

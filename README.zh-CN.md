@@ -6,6 +6,8 @@
 
 > 参考借鉴 [echarts-for-react](https://github.com/hustcc/echarts-for-react)
 
+> [Demo || 示例](https://bigfacemaster.cn/echarts-next-for-react/)
+
 # 1. 安装
 
 ```sh

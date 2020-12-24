@@ -11,4 +11,5 @@ export default defineConfig({
     ['en-US', 'English'],
     ['zh-CN', '中文'],
   ],
+  base: './echarts-next-for-react',
 });

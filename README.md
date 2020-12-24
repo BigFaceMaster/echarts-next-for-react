@@ -8,6 +8,8 @@ English | [中文](https://github.com/BigFaceMaster/echarts-next-for-react/blob/
 
 > Refer to the [echarts-for-react](https://github.com/hustcc/echarts-for-react)
 
+> [Demo](https://bigfacemaster.cn/echarts-next-for-react/)
+
 # 1. install
 
 ```sh
