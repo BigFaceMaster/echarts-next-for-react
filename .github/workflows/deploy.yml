@@ -1,4 +1,4 @@
-name: Deyloy CI
+name: Deyloy Site
 
 on:
   workflow_dispatch:
