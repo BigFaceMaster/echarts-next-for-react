@@ -23,3 +23,5 @@ CNAME
 .npmrc
 .idea
 yarn.lock
+/docs-dist/
+/docs-dist

@@ -5,3 +5,5 @@
 .npmrc
 .idea
 yarn.lock
+/docs-dist/
+/dist
