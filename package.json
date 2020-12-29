@@ -1,6 +1,6 @@
 {
   "name": "echarts-next-for-react",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Echarts(v5.x | next) components for react.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -33,7 +33,7 @@
     "email": "bigfacemaster@gmail.com"
   },
   "scripts": {
-    "lint": "npm run lint:js && npm run lint:prettier",
+    "lint": "npm run lint:js && npm run lint:prettier && npm run prettier",
     "lint-staged:js": "eslint --ext .ts,.tsx && npm run prettier && npm run lint",
     "lint:fix": "eslint --fix --cache --ext .ts,.tsx --format=pretty ./src",
     "lint:js": "eslint --cache --ext .ts,.tsx --format=pretty ./src",
