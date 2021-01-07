@@ -8,6 +8,7 @@ import isEmpty from 'lodash/isEmpty';
 import isString from 'lodash/isString';
 import { bind, clear } from 'size-sensor';
 import { useMount, useUnmount } from 'react-use';
+import 'echarts-gl';
 
 export type EChartsNextForReactCoreProps = {
   option: EChartsOption;

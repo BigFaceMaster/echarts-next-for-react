@@ -1,6 +1,6 @@
 {
   "name": "echarts-next-for-react",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Echarts(v5.x | next) components for react.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -54,6 +54,7 @@
     "classnames": "^2.2.6",
     "size-sensor": "^1.0.1",
     "echarts": "^5.0.0",
+    "echarts-gl": "^2.0.0-rc.3",
     "lodash": "^4.17.20",
     "react-use": "^15.3.4"
   },
