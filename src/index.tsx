@@ -58,7 +58,7 @@ const EChartsNextForReactCore: FC<EChartsNextForReactCoreProps> = (props) => {
   const getChartDom = () => {
     const chartObj = getChartInstance();
     if (chartObj) {
-      chartObj.setOption(option, notMerge ?? false, lazyUpdate ?? false);
+      chartObj.setOption(option, notMerge ?? false, !!lazyUpdate ?? false);
       if (showLoading) {
         chartObj.showLoading();
       } else {
@@ -124,8 +124,16 @@ const EChartsNextForReactCore: FC<EChartsNextForReactCoreProps> = (props) => {
 
   useEffect(() => {
     const chartDom = getChartDom();
-    if (chartDom) {
-      chartDom.resize();
+    // @ts-ignore
+    if (chartDom?._dom) {
+      // @ts-ignore
+      bind(chartDom._dom, () => {
+        try {
+          chartDom?.resize();
+        } catch (e) {
+          console.error(e);
+        }
+      });
     }
   }, [style, className, showLoading]);
 

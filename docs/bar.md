@@ -71,7 +71,7 @@ export default () => {
     },
   };
 
-  return <EChartsNextForReactCore option={option} />;
+  return <EChartsNextForReactCore lazyUpdate={true} option={option} />;
 };
 ```
 
