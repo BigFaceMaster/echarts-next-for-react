@@ -25,3 +25,5 @@ CNAME
 yarn.lock
 /docs-dist/
 /docs-dist
+pnpm-lock.yaml
+.docz

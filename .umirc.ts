@@ -20,4 +20,5 @@ export default defineConfig({
         ga: 'UA-154123333-1',
       }
     : false,
+  esbuild: {},
 });

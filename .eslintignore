@@ -7,3 +7,6 @@
 yarn.lock
 /docs-dist/
 /dist
+pnpm-lock.yaml
+
+.docz

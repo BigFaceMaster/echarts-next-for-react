@@ -1,12 +1,7 @@
-import { IBundleOptions } from 'father';
-
-const options: IBundleOptions = {
+export default {
   cjs: 'rollup',
   esm: 'rollup',
-  // @ts-ignore
   doc: {
     typescript: true,
   },
 };
-
-export default options;

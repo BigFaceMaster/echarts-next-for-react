@@ -54,6 +54,11 @@ export default demo();
 
 see [Apache ECharts](https://echarts.apache.org/en/index.html).
 
+## Tasks
+
+- [ ]
+- [ ] support echarts-gl
+
 ## LICENSE
 
 MIT

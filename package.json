@@ -1,6 +1,6 @@
 {
   "name": "echarts-next-for-react",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Echarts(v5.x | next) components for react.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -40,7 +40,6 @@
     "lint:prettier": "prettier --check \"**/*\" --end-of-line auto",
     "precommit": "lint-staged",
     "prettier": "prettier -c --write \"**/*\"",
-    "dev": "father doc dev",
     "build": "father build",
     "start": "dumi dev",
     "site": "dumi build",
@@ -52,11 +51,10 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "size-sensor": "^1.0.1",
     "echarts": "^5.0.0",
-    "echarts-gl": "^2.0.0-rc.3",
     "lodash": "^4.17.20",
-    "react-use": "^15.3.4"
+    "react-use": "^17.1.1",
+    "size-sensor": "^1.0.1"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.7",
@@ -64,13 +62,14 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@umijs/fabric": "^2.2.0",
+    "@umijs/plugin-esbuild": "^1.1.0",
     "cross-env": "^7.0.0",
+    "dumi": "next",
     "eslint": "^7.1.0",
+    "father": "^2.30.2",
     "lint-staged": "^10.0.0",
     "prettier": "^2.0.1",
-    "father": "^2.16.0",
     "typescript": "^4.0.0",
-    "dumi": "next",
     "umi": "^3.2.10"
   },
   "lint-staged": {
