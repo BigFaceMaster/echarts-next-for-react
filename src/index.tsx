@@ -1,13 +1,18 @@
 import type { FC } from 'react';
 import React, { useEffect, useRef } from 'react';
-import type { EChartsOption } from 'echarts';
-import { dispose, getInstanceByDom, init } from 'echarts';
 import classNames from 'classnames';
 import isFunction from 'lodash/isFunction';
 import isEmpty from 'lodash/isEmpty';
 import isString from 'lodash/isString';
 import { bind, clear } from 'size-sensor';
 import { useMount, useUnmount } from 'react-use';
+// echarts
+// 引入 echarts 核心模块，核心模块提供了 echarts 使用必须要的接口。
+// Import the echarts core module, which provides the necessary interfaces for using echarts.
+import type { EChartsOption } from 'echarts';
+import * as echarts from 'echarts/core';
+
+import { getRegisterComponents } from '@/utils';
 
 export type EChartsNextForReactCoreProps = {
   option: EChartsOption;
@@ -28,6 +33,7 @@ export type EChartsNextForReactCoreProps = {
   showLoading?: boolean;
   onChartReady?: (arg0: any) => void;
   onEvents?: Record<string, unknown>;
+  renderType?: 'canvas' | 'svg';
 };
 
 const EChartsNextForReactCore: FC<EChartsNextForReactCoreProps> = (props) => {
@@ -42,13 +48,26 @@ const EChartsNextForReactCore: FC<EChartsNextForReactCoreProps> = (props) => {
     showLoading,
     onChartReady,
     onEvents,
+    renderType = 'canvas',
   } = props;
+  // coordinateSystem 'polar': PolarComponent
+
+  const isCanvas = renderType === 'canvas';
+
+  // necessary Component
+  const useOps = getRegisterComponents(option, isCanvas);
+
+  useEffect(() => {
+    echarts.use(useOps);
+  }, []);
+
   const chartRefElements = useRef<HTMLDivElement>(null);
 
   const getChartInstance = () => {
     if (chartRefElements?.current) {
       return (
-        getInstanceByDom(chartRefElements?.current) ?? init(chartRefElements?.current, theme, opts)
+        echarts.getInstanceByDom(chartRefElements?.current) ??
+        echarts.init(chartRefElements?.current, theme, opts)
       );
     }
     return undefined;
@@ -108,7 +127,7 @@ const EChartsNextForReactCore: FC<EChartsNextForReactCoreProps> = (props) => {
   const disposeCurrentChart = () => {
     if (chartRefElements?.current) {
       clear(chartRefElements?.current);
-      dispose(chartRefElements?.current);
+      echarts.dispose(chartRefElements?.current);
     }
   };
 
