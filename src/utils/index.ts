@@ -1,5 +1,5 @@
 import isEmpty from 'lodash/isEmpty';
-import isObject from 'lodash/isObject';
+import isArray from 'lodash/isArray';
 import {
   BarChart,
   BoxplotChart,
@@ -62,18 +62,10 @@ import { CanvasRenderer, SVGRenderer } from 'echarts/renderers';
 import type { EChartsOption } from 'echarts';
 
 const enableComponentBySeriesType = (series: object | any[], type: any) =>
-  isObject(series)
-    ? // @ts-ignore
-      series?.type === type
-    : // @ts-ignore
-      series?.length > 0 && !!series?.find((v) => v.type === type);
+  (isArray(series) ? series : [series]).find(({ type: t }) => t === type);
 
 const enableComponentBySeriesProp = (series: object | any[], prop: any) =>
-  isObject(series)
-    ? // @ts-ignore
-      series?.[prop]
-    : // @ts-ignore
-      series?.length > 0 && !!series?.map(v.prop);
+  (isArray(series) ? series : [series]).map((v) => v[prop]);
 
 export const getRegisterComponents = (option: EChartsOption, isCanvas: boolean) => {
   // necessary Component
@@ -120,11 +112,10 @@ export const getRegisterComponents = (option: EChartsOption, isCanvas: boolean) 
     }
     // register polar Component
     if (
-      polar &&
-      // @ts-ignore
-      ((isObject(series) && series?.coordinateSystem === 'polar') ||
-        // @ts-ignore
-        (series?.length > 0 && series?.find((v) => v.coordinateSystem === 'polar')))
+      polar ||
+      !!(isArray(series) ? series : [series]).find(
+        ({ coordinateSystem }) => coordinateSystem === 'polar',
+      )
     ) {
       registerComponents = [PolarComponent, ...registerComponents];
     }
@@ -178,10 +169,10 @@ export const getRegisterComponents = (option: EChartsOption, isCanvas: boolean) 
     }
     // register geo Component
     if (
-      geo || // @ts-ignore
-      (isObject(series) && series?.coordinateSystem === 'geo') ||
-      // @ts-ignore
-      (series?.length > 0 && series?.find((v) => v.coordinateSystem === 'geo'))
+      geo ||
+      !!(isArray(series) ? series : [series]).find(
+        ({ coordinateSystem }) => coordinateSystem === 'geo',
+      )
     ) {
       registerComponents = [GeoComponent, ...registerComponents];
     }
@@ -189,9 +180,9 @@ export const getRegisterComponents = (option: EChartsOption, isCanvas: boolean) 
     if (
       parallel ||
       enableComponentBySeriesType(series, 'parallel') || // @ts-ignore
-      (isObject(series) && series?.coordinateSystem === 'parallel') ||
-      // @ts-ignore
-      (series?.length > 0 && series?.find((v) => v.coordinateSystem === 'parallel'))
+      !!(isArray(series) ? series : [series]).find(
+        ({ coordinateSystem }) => coordinateSystem === 'parallel',
+      )
     ) {
       registerComponents = [ParallelChart, ParallelComponent, ...registerComponents];
     }
@@ -224,7 +215,11 @@ export const getRegisterComponents = (option: EChartsOption, isCanvas: boolean) 
     // register components by series
     // register line component
     if (enableComponentBySeriesType(series, 'line')) {
-      registerComponents = [LinesChart, LineChart, ...registerComponents];
+      registerComponents = [LineChart, LinesChart, ...registerComponents];
+    }
+    // register lines component
+    if (enableComponentBySeriesType(series, 'lines')) {
+      registerComponents = [LineChart, LinesChart, ...registerComponents];
     }
     // register bar component
     if (enableComponentBySeriesType(series, 'bar')) {
@@ -269,10 +264,6 @@ export const getRegisterComponents = (option: EChartsOption, isCanvas: boolean) 
     // register map component
     if (enableComponentBySeriesType(series, 'map')) {
       registerComponents = [MapChart, ...registerComponents];
-    }
-    // register lines component
-    if (enableComponentBySeriesType(series, 'lines')) {
-      registerComponents = [LineChart, LinesChart, ...registerComponents];
     }
     // register sankey component
     if (enableComponentBySeriesType(series, 'sankey')) {

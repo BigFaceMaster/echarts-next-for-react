@@ -50,7 +50,6 @@ const EChartsNextForReactCore: FC<EChartsNextForReactCoreProps> = (props) => {
     onEvents,
     renderType = 'canvas',
   } = props;
-  // coordinateSystem 'polar': PolarComponent
 
   const isCanvas = renderType === 'canvas';
 
